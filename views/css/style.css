@@ -1,0 +1,925 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #5682a3;
+}
+
+p{
+    white-space: initial;
+    word-wrap: break-word
+}
+
+.root{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.root  .header{
+    width: 100vw;
+    height: 10vh;
+    padding: 0 5vw;
+}
+
+.header_logo{
+    width: 18vw;
+}
+
+.info_gmail img, .info_phone img, .header_login{
+    width: 1.8vw;
+    margin-left: 2.5vw;
+    margin-right: 1vw;
+    cursor: pointer;
+}
+
+.menu{
+    background-color: #06346c;
+    width: 100vw;
+    height: 10vh;
+    padding: 0 15vw;
+    color: white;
+    transition: all .3s;
+}
+
+.menu p{
+    cursor: pointer;
+    opacity: .4;
+}
+
+.logout{
+    width: 2rem;
+    margin-left: 1rem;
+}
+
+.align-center-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news_content{
+    width: 100vw;
+    padding: 5vw;
+}
+
+
+.news_content .news_trends{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.trend_card{
+    width: 32%;
+    overflow: hidden;
+}
+
+.trend_card_img img{
+    width: 100%;
+}
+
+.trend_card_img{
+    width: 100%;
+    position: relative;
+}
+
+.trend_card_img .trend_card_date{
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    padding: .5vw;
+    background: #06346c;
+    color: white;
+}
+
+.trend_card_title, .latest_card_title{
+    width: 100%;
+    overflow:hidden ;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis ;
+    margin: 1vw 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #06346c;
+}
+
+.trend_card_text, .latest_card_text{
+    width: 100%;
+    height: 4.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    margin-bottom: .5vw;
+    text-overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+
+.trend_card_btn, .latest_card_btn, .n_latest_card_btn{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5vw 1.2vw;
+    background: #6FB82B;
+    border: .1vw solid #6FB82B;
+    box-sizing: border-box;
+    box-shadow: 0 .2vw 1vw rgba(0, 0, 0, 0.25);
+    border-radius: .5vw;
+    color: white;
+    margin-bottom: 2vw;
+}
+
+.latest_cards{
+    width: 90vw;
+    padding: 5vw 0;
+}
+
+.latest_cards_title{
+    text-transform: uppercase;
+    margin-bottom: 3vw;
+}
+
+.latest_body_cards{
+    display: grid;
+    grid-template-columns: 43.5vw 43.5vw;
+    grid-gap: 3vw;
+}
+
+.first_latest_card{
+    width: 100%;
+    overflow: hidden;
+}
+
+.latest_card_img, .n_latest_card_img{
+    position: relative;
+}
+
+.latest_card_img, .latest_card_img img{
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+}
+
+.latest_card_date, .n_latest_card_date{
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    padding: .5vw;
+    background: #374C91;
+    color: white;
+}
+
+.next_latest_cards{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 46% 46%;
+    grid-gap: 8%;
+}
+
+.n_latest_card{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 4%;
+}
+
+.n_latest_card_img, .n_latest_card_img img{
+    width: 100%;
+    height: 19vw;
+    object-fit: cover;
+}
+
+.n_latest_card_body p{
+    text-overflow: ellipsis;
+    height: 100%;
+    overflow: hidden;
+}
+
+.n_latest_card_body{
+    height: 19vw;
+    padding: .1vw;
+    display: grid;
+    grid-template-rows: 20% 65% 15%;
+    align-items: center;
+    overflow: hidden;
+}
+
+.n_latest_card_title{
+    display: flex;
+    align-items: center;
+}
+
+.footer{
+    background-color: #06346c;
+    width: 100vw;
+    padding: 0 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .footer_logo{
+    width: 24vw;
+    height: 10vw;
+    object-fit: cover;
+}
+
+.footer_location{
+    color: white;
+    width: 19vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer_location_body,.footer_social_body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_social_body{
+    width: 25vw;
+}
+
+.footer_location_body img{
+    width: 1.5vw;
+    margin-right: 1vw;
+}
+
+.footer_social{
+    color: white;
+    display: flex;
+    width: 22vw;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_social_title, .footer_location_title{
+    display: flex;
+    align-self: flex-start;
+    margin-bottom: 1vw;
+}
+
+.footer_social_body img{
+    width: 2rem;
+    color: white;
+}
+
+
+
+/* ------------------------ Skills ------------------------- */
+
+
+
+
+.our_skills, .our_about, .our_companions{
+    width: 100vw;
+    padding: 5vw;
+}
+
+.our_skills_title, .our_about_title,.our_companions_title{
+    margin-bottom: 3vw;
+    color: #06346c;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.our_skills_body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7.5vw;
+}
+
+.our_skill{
+    border-radius: .5vw;
+    box-shadow: 0 .2vw 1vw rgba(0, 0, 0, 0.84);
+    background: #06346C;
+    width: 25%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color:#F9CA48;
+    cursor: pointer;
+}
+
+.our_skill img{
+    width: 40%;
+}
+
+.skill_last{
+    width: 75%!important;
+}
+
+.our_skill p{
+    text-align: center;
+}
+
+.our_companions{
+    padding:  2vw 5vw;
+}
+.our_companions_body{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.our_companions_body img{
+    width: 25%;
+    height: 25vh;
+    padding: 1vw 2vw;
+    object-fit: cover;
+}
+
+
+/* ------------------------ Skills End ------------------------- */
+
+
+
+.our_about{
+    background-color: #06346c;
+}
+
+.our_about_body{
+    padding: 0vw 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.our_about_title{
+    color: #ffffff;
+}
+
+.our_about_thing{
+    border-radius: 50%;
+    width: 15vw;
+    height: 15vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 0;
+    color: #333333;
+}
+
+.our_about_thing img{
+    width: 7vw;
+}
+
+
+
+
+/* ------------------------------ About ------------------------------ */
+
+
+
+
+.main_office, .hamroh_about, .employee_content{
+    width: 100vw;
+    padding: 2vw 5vw;
+}
+
+.main_office_title{ 
+    margin-bottom: 3vw;
+    text-align: center;
+    color: #06346c;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.hamroh_about, .main_office_body_thing{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamroh_about_img, .hamroh_about_body, .main_office_body_thing_body, .main_office_body_img{
+    width: 45%;
+}
+
+.hamroh_about_title, .main_office_body_thing_body_title{
+    margin-bottom: 2vw; 
+    font-weight: 700;
+    color: #06346c;
+}
+
+.main_office_body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main_office_body_thing{
+    margin: 2vw 0;
+    width: 45%;
+}
+
+.main_office_body_thing_about> div{
+    display: flex;
+    align-items: center;
+    margin-top: 2vw;
+
+}
+
+.main_office_body_thing_about>div>img{
+    width: 2.5vw;
+    margin-right: 2vw;
+}
+
+.main_office_body_thing_about p::first-word{
+    color: red;
+}
+
+.employee_body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.comfort_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.comfort_card {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 80vw;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.comfort_card img {
+    width: 10vw;
+}
+
+@media only screen and (max-width:800px)
+{
+    .comfort_card {
+        flex-direction: column;
+    }
+
+    .comfort_card img {
+        width: 40vw;
+    }
+}
+
+
+
+/* ---------------------------- About end ---------------------------- */
+
+
+
+
+/* ------------------------------------ Login ---------------------------------------- */
+.login_wrapper{
+    width: 100vw;
+    background-color: #FFFFFF;
+    height: 58.7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+    padding: 2vw;
+    height: 50vh;
+    width: 30vw;
+    border-radius: 1vw;
+    box-shadow: 0 .2vw 1vw rgba(0, 0, 0, 0.25);
+}
+
+.login_text{
+    text-align: center;
+    margin-bottom: 4vw;
+}
+.login_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu .header_login{
+    display: none;
+}
+
+.login_body > div {
+    margin-bottom: 2vw;
+    position: relative;
+}
+
+.login_body > div input{
+    outline: none;
+    width: 20vw;
+    border: none;
+    border-bottom: .1vw solid #06346C;
+    height: 100%;
+    padding: .3vw;
+    transition: all .3s;
+}
+
+.login_body > div input:focus{
+    border-bottom: .2vw solid #06346C;
+}
+
+.login_body > div input:valid + label, .login_body > div input:focus + label{
+    top: -50%;
+}
+
+.login_body > div label{
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    transition: all .3;
+}
+
+.login_body > button, button{
+    margin-top: 3vw;
+    cursor: pointer;
+    width: 15vw;
+    padding: .8vw 0;
+    outline: none;
+    border: none;
+    background-color: #06346C;
+    color: white;
+    border-radius: 1vw;
+    box-shadow: 0 .2vw 1vw rgba(0, 0, 0, 0.25);
+}
+
+.login_body > button:hover, button:hover{
+    box-shadow: none;
+}
+
+.login_body > button:active, button:active{
+    transform: translate(.1vw , .1vw);
+}
+
+/* ---------------------------------- Login End -------------------------------------- */
+
+
+/* ------------------------------------------ Test Page ----------------------------------------- */
+
+.test_page{
+    width: 100vw;
+    height: 68.7vh;
+    box-shadow: 0 .2vw 1vw rgba(0, 0, 0, 0.25);
+}
+
+.test_render {
+    padding: 2vw;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.test_block{
+    float: left;
+    width: 20vw;
+    box-shadow: 0 .2vw 1vw rgba(0, 0, 0, 0.25);
+    padding: 1.5vw;
+    border-radius: 2vw;
+    margin: 1vw 2vw;
+}
+
+.test-wrapper{
+    width: 80%;
+    margin: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options {
+    width: 35%;
+}
+
+.question{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+button:disabled{
+    background: transparent;
+    box-shadow: none;
+}
+
+.test_block > button{
+    cursor: pointer;
+    margin: 0 1vw;
+    margin-top: 3vw;
+    width: 15vw;
+    padding: .8vw 0;
+    outline: none;
+    border: none;
+    background-color: #06346C;
+    color: white;
+    border-radius: 1vw;
+    box-shadow: 0 .2vw 1vw rgba(0, 0, 0, 0.25);
+}
+
+.test_block > button:hover{
+    box-shadow: none;
+}
+
+.test_block > button:active{
+    transform: translate(.1vw , .1vw);
+}
+
+/* ---------------------------------------- Test Page End --------------------------------------- */
+
+
+
+@media only screen and (max-width:800px)
+{
+    .burger {
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 3.2rem;
+        margin-left: 2rem;
+    }
+    
+    .burger span {
+        position: relative;
+        width: 2.4rem;
+        height: .18rem;
+        background: black;
+    }
+    
+    .header_info ,.burger span::after{
+        top: .7rem;
+    }
+    
+    .header_info ,.burger span::before {
+        bottom: .7rem;
+    }
+    
+    .burger span::after, .burger span::before {
+        content: " ";
+        transition: all 0.5s;
+        position: absolute;
+        width: 2.4rem;
+        height: .18rem;
+        background: black;
+    } 
+    
+    .burger.open span{
+        background: transparent;
+        transform-origin: center;
+    }
+    
+    .burger.open span::after,
+    .burger.open span::before{
+        transition: all 0.5s;
+    }
+    
+    .burger.open span:before{
+        transform: rotate(45deg) translateX(0.5rem) translateY(0.6rem);
+    }
+    
+    .burger.open span:after{
+        transform: rotate(315deg) translateX(0.35rem) translateY(-0.5rem);
+    }
+
+    .info_gmail, .info_phone, .header_login { 
+        display: none;
+    }
+
+    .header_logo{
+        width: 14rem;
+    }
+
+    .menu {
+        height: 0!important;
+        overflow: hidden!important;
+        transition: all .4s;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu.height {
+        height: auto!important;
+        padding: 1rem;
+        transition: all .4s;
+    }
+
+    .menu p{
+        margin:1rem 0;
+    }
+
+    .carousel__photo{
+        height: 60vh;
+    }
+
+    .our_skill{
+        width: 28%;
+        height: 28vh;
+    }
+
+    .our_about_body {
+        padding: 0;
+    }
+
+    .our_about_thing {
+        width: 18vw;
+        height: 18vw;
+    }
+
+    .our_companions_body img {
+        height: 18vh;
+    }
+    .our_companions_title{
+        margin-bottom: 0vw ;
+    }
+
+    .footer_location {
+        width: 35vw;
+    }
+
+    .footer_social {
+        width: 20vw;
+    }
+
+    .main_office, .hamroh_about, .employee_content{
+        padding: 2vw;
+    }
+
+    .menu .header_login{
+        display: block;
+        width: 2rem;
+    }
+
+    .login{
+        width: 40vw;
+    }
+    .login_body > div input{
+        width: 30vw;
+    }
+
+    .carousel__photo{
+        height: 60vh!important;
+    }
+    
+    .footer_social_body img{
+        width: 1.6rem;
+    }
+
+    .trend_card_btn, .latest_card_btn, .n_latest_card_btn{
+        width: 45%;
+    }
+}
+
+
+/* max-width 650 */
+@media only screen and (max-width:650px)
+{
+    .our_skills_body{
+        padding: 0;
+    }
+
+    .our_about_thing img{
+        width: 6.5vw;
+    }
+    .our_about_thing h2{
+        font-size: 1.1rem;
+    }
+
+    .footer{
+        padding: 2vw ;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .footer .footer_logo{
+        display: none;
+    }
+    .footer_social {
+        width: 45vw;
+    }
+
+    .footer_social_body{
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+    }
+
+    .footer_location{
+        width: 45vw;
+    }
+
+    .trend_card {
+        width: 41vw;
+        margin: 0 2vw 3vw;
+    }    
+
+    .main_office_body_thing {
+        margin: 2vw 5%;
+        width: 90%;
+    }
+
+    .hamroh_about{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .hamroh_about_body, .hamroh_about_img{
+        width: 80%;
+        margin-top: 2vw;
+    }
+    .test_block {
+        width: 32vw;
+    }
+    .login{
+        height: 35vh;
+        width: 70vw;
+    }
+    .login_body > div input{
+        width: 45vw;
+        margin-bottom: 1rem;
+    }
+    .login_body > button{
+        width: 30vw;
+        margin-top: 2rem;
+        padding: 1.2vw;
+    }
+
+}
+
+@media only screen and (max-width:450px){
+    .our_skill{
+        width: 51%;
+        height: 22vh;
+        margin-bottom: 4vw;
+    }
+
+    .our_skills_body{
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .our_about_body{
+        flex-wrap: wrap;
+    }
+    .our_about_thing{
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .our_about_thing img{
+        width: 7vw;
+    }
+
+    .our_about_thing h2{
+        font-size: 1rem;
+    }
+
+    .our_about_thing p{
+        font-size: .7rem;
+    }
+
+    .footer {
+        display: block
+    }
+
+    .footer_location, .footer_social{
+        width: 80%;
+        margin: 3vw 10%;
+    }
+    .footer_social_title, .footer_location_title{
+        margin: 1vw 0 2vw;
+    }
+    .hamroh_about_body, .hamroh_about_img{
+        width: 90%;
+    }
+
+}
